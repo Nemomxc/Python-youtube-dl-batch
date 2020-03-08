@@ -44,7 +44,7 @@ def download_no_matter_what(url):
 
 if __name__ == '__main__':
     # Open the file that contains the URL
-    f=open('C:\\Programs\\aria2\\download.txt','r+')
+    f=open('#direct path to the file contains the urls','r+')
 
     # Read the URL from the command line
     urls=get_url(f)
