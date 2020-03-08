@@ -52,10 +52,10 @@ if __name__ == '__main__':
     # Specify extra command line options here
     options = {
         'format': 'best',
-        'outtmpl':'G:/CloudMusic/NewFolder/PH/%(title)s-%(uploader)s.%(ext)s',
+        'outtmpl':'',#output template ,check Readme.md from youtube-dl
         'proxy':'127.0.0.1:1081',
-        'external_downloader': 'C:\\Programs\\aria2\\aria2c.exe',
-        'external-downloader-args': '-x 16 -k 1M',
+        'external_downloader': '',#direct path to external-downloader here
+        #'external-downloader-args': '-x 16 -k 1M', #optional arguments
         'no-overwrites':'true',
         'retries':30
     }
