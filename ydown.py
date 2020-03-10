@@ -44,19 +44,23 @@ def download_no_matter_what(url):
 
 if __name__ == '__main__':
     # Open the file that contains the URL
-    f=open('#direct path to the file contains the urls','r+')
+    f=open('C:\\Programs\\aria2\\download.txt','r+')
 
     # Read the URL from the command line
     urls=get_url(f)
 
     # Specify extra command line options here
     options = {
-        'format': 'best',
-        'outtmpl':'',#output template ,check Readme.md from youtube-dl
+        'format': '720p',
+        'outtmpl':'G:/CloudMusic/NewFolder/PH/%(title)s-%(uploader)s.%(ext)s',
         'proxy':'127.0.0.1:1081',
-        'external_downloader': '',#direct path to external-downloader here
-        #'external-downloader-args': '-x 16 -k 1M', #optional arguments
-        'no-overwrites':'true',
+        'external_downloader': 'C:\\Programs\\aria2\\aria2c.exe',
+        'external_downloader_args': ['-x','16','-k','1M'],
+        'nooverwrites':'True',
+        'hls_prefer_native':False,
+        'prefer_ffmpeg':'True',
+        'ffmpeg_location':'C:\\Programs\\aria2\\ffmpeg.exe',
+        'continuedl':'True',
         'retries':30
     }
 
